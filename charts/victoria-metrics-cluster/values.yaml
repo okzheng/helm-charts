@@ -50,8 +50,10 @@ vmselect:
   priorityClassName: ""
   # -- Overrides the full name of vmselect component
   fullnameOverride: ""
-  # -- Suppress rendering `--storageNode` FQDNs based on `vmstorage.replicaCount` value. If true suppress rendering `--stroageNodes`, they can be re-defined in exrtaArgs
+  # -- Suppress rendering `--storageNode` FQDNs based on `vmstorage.replicaCount` value.
   suppresStorageFQDNsRender: false
+  # -- If suppresStorageFQDNsRender true suppress rendering `--stroageNodes`, they can be re-defined in vmstorageNodes.
+  vmstorageNodes: []
   automountServiceAccountToken: true
   # Extra command line arguments for vmselect component
   extraArgs:
@@ -282,8 +284,10 @@ vminsert:
   extraLabels: {}
   # -- Additional environment variables (ex.: secret tokens, flags) https://github.com/VictoriaMetrics/VictoriaMetrics#environment-variables
   env: []
-  # -- Suppress rendering `--storageNode` FQDNs based on `vmstorage.replicaCount` value. If true suppress rendering `--stroageNodes`, they can be re-defined in exrtaArgs
+  # -- Suppress rendering `--storageNode` FQDNs based on `vmstorage.replicaCount` value.
   suppresStorageFQDNsRender: false
+  # -- If suppresStorageFQDNsRender true suppress rendering `--stroageNodes`, they can be re-defined in vmstorageNodes.
+  vmstorageNodes: []
   automountServiceAccountToken: true
 
   # Readiness & Liveness probes
